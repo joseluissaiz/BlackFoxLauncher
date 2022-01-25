@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2C2C2C"
+    tools:context=".Games.Game2048.View2048">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/baloo2"
+        android:text="2048"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toTopOf="@+id/_dynamic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/a2048_alien_grid"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:padding="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <GridLayout
+            android:padding="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--Primera fila-->
+
+            <LinearLayout
+                android:padding="4dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="2dp"
+                android:layout_rowWeight="1"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/a2048_alien_cell">
+
+                <TextView
+                    android:id="@+id/f0c0"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:singleLine="true"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textSize="25sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/baloo2"
+                    android:background="@drawable/tile_2048"/>
+
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:padding="4dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="2dp"
+                android:layout_rowWeight="1"
+                android:layout_row="0"
+                android:layout_column="1"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/a2048_alien_cell">
+
+                <TextView
+                    android:id="@+id/f0c1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:singleLine="true"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textSize="25sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/baloo2"
+                    android:background="@drawable/tile_2048"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:padding="4dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="2dp"
+                android:layout_rowWeight="1"
+                android:layout_row="0"
+                android:layout_column="2"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/a2048_alien_cell">
+
+                <TextView
+                    android:id="@+id/f0c2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:singleLine="true"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textSize="25sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/baloo2"
+                    android:background="@drawable/tile_2048"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:padding="4dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="2dp"
+                android:layout_rowWeight="1"
+                android:layout_row="0"
+                android:layout_column="3"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/a2048_alien_cell">
+
+                <TextView
+                    android:id="@+id/f0c3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:singleLine="true"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textSize="25sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/baloo2"
+                    android:background="@drawable/tile_2048"/>
+
+            </LinearLayout>
+
+
+            <!--Segunda fila-->
+
+            <LinearLayout
+                android:padding="4dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="2dp"
+                android:layout_rowWeight="1"
+                android:layout_row="1"
+                android:layout_column="0"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/a2048_alien_cell">
+
+                <TextView
+                    android:id="@+id/f1c0"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:singleLine="true"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textSize="25sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/baloo2"
+                    android:background="@drawable/tile_2048"/>
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:padding="4dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="2dp"
+                android:layout_rowWeight="1"
+                android:layout_row="1"
+                android:layout_column="1"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/a2048_alien_cell">
+
+                <TextView
+                    android:id="@+id/f1c1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:singleLine="true"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textSize="25sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/baloo2"
+                    android:background="@drawable/tile_2048"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:padding="4dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="2dp"
+                android:layout_rowWeight="1"
+                android:layout_row="1"
+                android:layout_column="2"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/a2048_alien_cell">
+
+                <TextView
+                    android:id="@+id/f1c2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:singleLine="true"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textSize="25sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/baloo2"
+                    android:background="@drawable/tile_2048"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:padding="4dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="2dp"
+                android:layout_rowWeight="1"
+                android:layout_row="1"
+                android:layout_column="3"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/a2048_alien_cell">
+
+                <TextView
+                    android:id="@+id/f1c3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:singleLine="true"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textSize="25sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/baloo2"
+                    android:background="@drawable/tile_2048"/>
+
+            </LinearLayout>
+
+            <!--Tercera fila-->
+
+            <LinearLayout
+                android:padding="4dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="2dp"
+                android:layout_rowWeight="1"
+                android:layout_row="2"
+                android:layout_column="0"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/a2048_alien_cell">
+
+                <TextView
+                    android:id="@+id/f2c0"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:singleLine="true"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textSize="25sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/baloo2"
+                    android:background="@drawable/tile_2048"/>
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:padding="4dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="2dp"
+                android:layout_rowWeight="1"
+                android:layout_row="2"
+                android:layout_column="1"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/a2048_alien_cell">
+
+                <TextView
+                    android:id="@+id/f2c1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:singleLine="true"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textSize="25sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/baloo2"
+                    android:background="@drawable/tile_2048"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:padding="4dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="2dp"
+                android:layout_rowWeight="1"
+                android:layout_row="2"
+                android:layout_column="2"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/a2048_alien_cell">
+
+                <TextView
+                    android:id="@+id/f2c2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:singleLine="true"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textSize="25sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/baloo2"
+                    android:background="@drawable/tile_2048"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:padding="4dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="2dp"
+                android:layout_rowWeight="1"
+                android:layout_row="2"
+                android:layout_column="3"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/a2048_alien_cell">
+
+                <TextView
+                    android:id="@+id/f2c3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:singleLine="true"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textSize="25sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/baloo2"
+                    android:background="@drawable/tile_2048"/>
+
+            </LinearLayout>
+
+            <!--Cuarta fila-->
+
+            <LinearLayout
+                android:padding="4dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="2dp"
+                android:layout_rowWeight="1"
+                android:layout_row="3"
+                android:layout_column="0"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/a2048_alien_cell">
+
+                <TextView
+                    android:id="@+id/f3c0"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:singleLine="true"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textSize="25sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/baloo2"
+                    android:background="@drawable/tile_2048"/>
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:padding="4dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="2dp"
+                android:layout_rowWeight="1"
+                android:layout_row="3"
+                android:layout_column="1"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/a2048_alien_cell">
+
+                <TextView
+                    android:id="@+id/f3c1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:singleLine="true"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textSize="25sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/baloo2"
+                    android:background="@drawable/tile_2048"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:padding="4dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="2dp"
+                android:layout_rowWeight="1"
+                android:layout_row="3"
+                android:layout_column="2"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/a2048_alien_cell">
+
+                <TextView
+                    android:id="@+id/f3c2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:singleLine="true"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textSize="25sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/baloo2"
+                    android:background="@drawable/tile_2048"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:padding="4dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="2dp"
+                android:layout_rowWeight="1"
+                android:layout_row="3"
+                android:layout_column="3"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/a2048_alien_cell">
+
+                <TextView
+                    android:id="@+id/f3c3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:singleLine="true"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textSize="25sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/baloo2"
+                    android:background="@drawable/tile_2048"/>
+
+            </LinearLayout>
+
+        </GridLayout>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

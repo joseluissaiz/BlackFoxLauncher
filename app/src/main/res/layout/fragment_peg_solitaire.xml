@@ -1,0 +1,892 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DDD0C6"
+    tools:context=".Games.PegSolitaire.PegSolitaire">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/baloo2"
+        android:text="Peg Solitaire"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toTopOf="@+id/_dynamic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/peg_board">
+
+        <GridLayout
+            android:padding="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--Primera fila-->
+
+            <ImageView
+                android:id="@+id/f0c0"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_margin="2dp"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:alpha="0"
+                android:background="@color/black"/>
+
+            <ImageView
+                android:padding="2dp"
+                android:id="@+id/f0c1"
+                android:layout_columnWeight="1"
+                android:layout_margin="2dp"
+                android:layout_rowWeight="1"
+                android:layout_row="0"
+                android:layout_column="1"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:alpha="0"
+                android:background="@color/black"/>
+
+            <LinearLayout
+                android:padding="3dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="2dp"
+                android:layout_rowWeight="1"
+                android:layout_row="0"
+                android:layout_column="2"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/peg_cell">
+
+                <ImageView
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:id="@+id/f0c2"
+                    android:src="@drawable/peg_unselected"/>
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:padding="3dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="2dp"
+                android:layout_rowWeight="1"
+                android:layout_row="0"
+                android:layout_column="3"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/peg_cell">
+
+                <ImageView
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:id="@+id/f0c3"
+                    android:src="@drawable/peg_unselected"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:padding="3dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="2dp"
+                android:layout_rowWeight="1"
+                android:layout_row="0"
+                android:layout_column="4"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/peg_cell">
+
+                <ImageView
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:id="@+id/f0c4"
+                    android:src="@drawable/peg_unselected"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/f0c5"
+                android:layout_columnWeight="1"
+                android:layout_margin="2dp"
+                android:layout_rowWeight="1"
+                android:layout_row="0"
+                android:layout_column="5"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:alpha="0"
+                android:background="@color/black"/>
+            <ImageView
+                android:id="@+id/f0c6"
+                android:layout_columnWeight="1"
+                android:layout_margin="2dp"
+                android:layout_rowWeight="1"
+                android:layout_row="0"
+                android:layout_column="6"
+                android:alpha="0"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@color/black"/>
+
+            <!--Segunda fila-->
+
+            <ImageView
+                android:id="@+id/f1c0"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_margin="2dp"
+                android:layout_row="1"
+                android:layout_column="0"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:alpha="0"
+                android:background="@color/black"/>
+
+            <ImageView
+                android:id="@+id/f1c1"
+                android:layout_columnWeight="1"
+                android:layout_margin="2dp"
+                android:layout_rowWeight="1"
+                android:layout_row="1"
+                android:layout_column="1"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:alpha="0"
+                android:background="@color/black"/>
+
+            <LinearLayout
+                android:padding="3dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="2dp"
+                android:layout_rowWeight="1"
+                android:layout_row="1"
+                android:layout_column="2"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/peg_cell">
+
+                <ImageView
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:id="@+id/f1c2"
+                    android:src="@drawable/peg_unselected"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:padding="3dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="2dp"
+                android:layout_rowWeight="1"
+                android:layout_row="1"
+                android:layout_column="3"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/peg_cell">
+
+                <ImageView
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:id="@+id/f1c3"
+                    android:src="@drawable/peg_unselected"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:padding="3dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="2dp"
+                android:layout_rowWeight="1"
+                android:layout_row="1"
+                android:layout_column="4"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/peg_cell">
+
+                <ImageView
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:id="@+id/f1c4"
+                    android:src="@drawable/peg_unselected"/>
+
+            </LinearLayout>
+
+
+            <ImageView
+                android:padding="2dp"
+                android:id="@+id/f1c5"
+                android:layout_columnWeight="1"
+                android:layout_margin="2dp"
+                android:layout_rowWeight="1"
+                android:layout_row="1"
+                android:layout_column="5"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:alpha="0"
+                android:background="@color/black"/>
+            <ImageView
+                android:padding="2dp"
+                android:id="@+id/f1c6"
+                android:layout_columnWeight="1"
+                android:layout_margin="2dp"
+                android:layout_rowWeight="1"
+                android:layout_row="1"
+                android:layout_column="6"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:alpha="0"
+                android:background="@color/black"/>
+
+            <!--Tercera fila-->
+
+            <LinearLayout
+                android:padding="3dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="2dp"
+                android:layout_rowWeight="1"
+                android:layout_row="2"
+                android:layout_column="0"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/peg_cell">
+
+                <ImageView
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:id="@+id/f2c0"
+                    android:src="@drawable/peg_unselected"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:padding="3dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="2dp"
+                android:layout_rowWeight="1"
+                android:layout_row="2"
+                android:layout_column="1"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/peg_cell">
+
+                <ImageView
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:id="@+id/f2c1"
+                    android:src="@drawable/peg_unselected"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:padding="3dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="2dp"
+                android:layout_rowWeight="1"
+                android:layout_row="2"
+                android:layout_column="2"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/peg_cell">
+
+                <ImageView
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:id="@+id/f2c2"
+                    android:src="@drawable/peg_unselected"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:padding="3dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="2dp"
+                android:layout_rowWeight="1"
+                android:layout_row="2"
+                android:layout_column="3"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/peg_cell">
+
+                <ImageView
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:id="@+id/f2c3"
+                    android:src="@drawable/peg_unselected"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:padding="3dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="2dp"
+                android:layout_rowWeight="1"
+                android:layout_row="2"
+                android:layout_column="4"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/peg_cell">
+
+                <ImageView
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:id="@+id/f2c4"
+                    android:src="@drawable/peg_unselected"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:padding="3dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="2dp"
+                android:layout_rowWeight="1"
+                android:layout_row="2"
+                android:layout_column="5"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/peg_cell">
+
+                <ImageView
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:id="@+id/f2c5"
+                    android:src="@drawable/peg_unselected"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:padding="3dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="2dp"
+                android:layout_rowWeight="1"
+                android:layout_row="2"
+                android:layout_column="6"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/peg_cell">
+
+                <ImageView
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:id="@+id/f2c6"
+                    android:src="@drawable/peg_unselected"/>
+
+            </LinearLayout>
+
+            <!--Cuarta fila-->
+
+            <LinearLayout
+                android:padding="3dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="2dp"
+                android:layout_rowWeight="1"
+                android:layout_row="3"
+                android:layout_column="0"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/peg_cell">
+
+                <ImageView
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:id="@+id/f3c0"
+                    android:src="@drawable/peg_unselected"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:padding="3dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="2dp"
+                android:layout_rowWeight="1"
+                android:layout_row="3"
+                android:layout_column="1"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/peg_cell">
+
+                <ImageView
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:id="@+id/f3c1"
+                    android:src="@drawable/peg_unselected"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:padding="3dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="2dp"
+                android:layout_rowWeight="1"
+                android:layout_row="3"
+                android:layout_column="2"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/peg_cell">
+
+                <ImageView
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:id="@+id/f3c2"
+                    android:src="@drawable/peg_unselected"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:padding="3dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="2dp"
+                android:layout_rowWeight="1"
+                android:layout_row="3"
+                android:layout_column="3"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/peg_cell">
+
+                <ImageView
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:id="@+id/f3c3"
+                    android:alpha="0"
+                    android:src="@drawable/peg_unselected"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:padding="3dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="2dp"
+                android:layout_rowWeight="1"
+                android:layout_row="3"
+                android:layout_column="4"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/peg_cell">
+
+                <ImageView
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:id="@+id/f3c4"
+                    android:src="@drawable/peg_unselected"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:padding="3dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="2dp"
+                android:layout_rowWeight="1"
+                android:layout_row="3"
+                android:layout_column="5"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/peg_cell">
+
+                <ImageView
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:id="@+id/f3c5"
+                    android:src="@drawable/peg_unselected"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:padding="3dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="2dp"
+                android:layout_rowWeight="1"
+                android:layout_row="3"
+                android:layout_column="6"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/peg_cell">
+
+                <ImageView
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:id="@+id/f3c6"
+                    android:src="@drawable/peg_unselected"/>
+
+            </LinearLayout>
+
+            <!--Quinta fila-->
+
+            <LinearLayout
+                android:padding="3dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="2dp"
+                android:layout_rowWeight="1"
+                android:layout_row="4"
+                android:layout_column="0"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/peg_cell">
+
+                <ImageView
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:id="@+id/f4c0"
+                    android:src="@drawable/peg_unselected"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:padding="3dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="2dp"
+                android:layout_rowWeight="1"
+                android:layout_row="4"
+                android:layout_column="1"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/peg_cell">
+
+                <ImageView
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:id="@+id/f4c1"
+                    android:src="@drawable/peg_unselected"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:padding="3dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="2dp"
+                android:layout_rowWeight="1"
+                android:layout_row="4"
+                android:layout_column="2"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/peg_cell">
+
+                <ImageView
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:id="@+id/f4c2"
+                    android:src="@drawable/peg_unselected"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:padding="3dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="2dp"
+                android:layout_rowWeight="1"
+                android:layout_row="4"
+                android:layout_column="3"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/peg_cell">
+
+                <ImageView
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:id="@+id/f4c3"
+                    android:src="@drawable/peg_unselected"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:padding="3dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="2dp"
+                android:layout_rowWeight="1"
+                android:layout_row="4"
+                android:layout_column="4"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/peg_cell">
+
+                <ImageView
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:id="@+id/f4c4"
+                    android:src="@drawable/peg_unselected"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:padding="3dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="2dp"
+                android:layout_rowWeight="1"
+                android:layout_row="4"
+                android:layout_column="5"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/peg_cell">
+
+                <ImageView
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:id="@+id/f4c5"
+                    android:src="@drawable/peg_unselected"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:padding="3dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="2dp"
+                android:layout_rowWeight="1"
+                android:layout_row="4"
+                android:layout_column="6"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/peg_cell">
+
+                <ImageView
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:id="@+id/f4c6"
+                    android:src="@drawable/peg_unselected"/>
+
+            </LinearLayout>
+
+
+            <!--Sexta fila-->
+
+            <ImageView
+                android:padding="2dp"
+                android:id="@+id/f5c0"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_margin="2dp"
+                android:layout_row="5"
+                android:layout_column="0"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:alpha="0"
+                android:background="@color/black"/>
+
+            <ImageView
+                android:padding="2dp"
+                android:id="@+id/f5c1"
+                android:layout_columnWeight="1"
+                android:layout_margin="2dp"
+                android:layout_rowWeight="1"
+                android:layout_row="5"
+                android:layout_column="1"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:alpha="0"
+                android:background="@color/black"/>
+
+            <LinearLayout
+                android:padding="3dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="2dp"
+                android:layout_rowWeight="1"
+                android:layout_row="5"
+                android:layout_column="2"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/peg_cell">
+
+                <ImageView
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:id="@+id/f5c2"
+                    android:src="@drawable/peg_unselected"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:padding="3dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="2dp"
+                android:layout_rowWeight="1"
+                android:layout_row="5"
+                android:layout_column="3"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/peg_cell">
+
+                <ImageView
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:id="@+id/f5c3"
+                    android:src="@drawable/peg_unselected"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:padding="3dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="2dp"
+                android:layout_rowWeight="1"
+                android:layout_row="5"
+                android:layout_column="4"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/peg_cell">
+
+                <ImageView
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:id="@+id/f5c4"
+                    android:src="@drawable/peg_unselected"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:padding="2dp"
+                android:id="@+id/f5c5"
+                android:layout_columnWeight="1"
+                android:layout_margin="2dp"
+                android:layout_rowWeight="1"
+                android:layout_row="5"
+                android:layout_column="5"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:alpha="0"
+                android:background="@color/black"/>
+            <ImageView
+                android:padding="2dp"
+                android:id="@+id/f5c6"
+                android:layout_columnWeight="1"
+                android:layout_margin="2dp"
+                android:layout_rowWeight="1"
+                android:layout_row="5"
+                android:layout_column="6"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:alpha="0"
+                android:background="@color/black"/>
+
+            <!--Septima fila-->
+
+            <ImageView
+                android:padding="2dp"
+                android:id="@+id/f6c0"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_margin="2dp"
+                android:layout_row="6"
+                android:layout_column="0"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:alpha="0"
+                android:background="@color/black"/>
+
+            <ImageView
+                android:padding="2dp"
+                android:id="@+id/f6c1"
+                android:layout_columnWeight="1"
+                android:layout_margin="2dp"
+                android:layout_rowWeight="1"
+                android:layout_row="6"
+                android:layout_column="1"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:alpha="0"
+                android:background="@color/black"/>
+
+            <LinearLayout
+                android:padding="3dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="2dp"
+                android:layout_rowWeight="1"
+                android:layout_row="6"
+                android:layout_column="2"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/peg_cell">
+
+                <ImageView
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:id="@+id/f6c2"
+                    android:src="@drawable/peg_unselected"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:padding="3dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="2dp"
+                android:layout_rowWeight="1"
+                android:layout_row="6"
+                android:layout_column="3"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/peg_cell">
+
+                <ImageView
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:id="@+id/f6c3"
+                    android:src="@drawable/peg_unselected"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:padding="3dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="2dp"
+                android:layout_rowWeight="1"
+                android:layout_row="6"
+                android:layout_column="4"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/peg_cell">
+
+                <ImageView
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:id="@+id/f6c4"
+                    android:src="@drawable/peg_unselected"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:padding="2dp"
+                android:id="@+id/f6c5"
+                android:layout_columnWeight="1"
+                android:layout_margin="2dp"
+                android:layout_rowWeight="1"
+                android:layout_row="6"
+                android:layout_column="5"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:alpha="0"
+                android:background="@color/black"/>
+            <ImageView
+                android:padding="2dp"
+                android:id="@+id/f6c6"
+                android:layout_columnWeight="1"
+                android:layout_margin="2dp"
+                android:layout_rowWeight="1"
+                android:layout_row="6"
+                android:layout_column="6"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:alpha="0"
+                android:background="@color/black"/>
+
+        </GridLayout>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
